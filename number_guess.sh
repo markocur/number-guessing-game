@@ -19,3 +19,8 @@ else
     echo "Welcome back, $USERNAME! You have played $GAMES games, and your best game took $BEST guesses."
   done
 fi
+
+NUMBER=$(shuf -i 1-1000 -n1)
+echo $NUMBER
+
+echo "Guess the secret number between 1 and 1000:"
