@@ -2,7 +2,7 @@
 
 PSQL="psql -X --username=freecodecamp --dbname=number_guess --tuples-only -c"
 
-# read -p  "Enter your username:" USERNAME
+# read -p  "Enter your username:" USERNAME (replaced to pass tests)
 echo "Enter your username:"
 read USERNAME
 CHECK_USER=$($PSQL "select username from users where username='$USERNAME'")
@@ -22,7 +22,7 @@ else
 fi
 
 REPS=0
-# NUMBER=$(shuf -i 1-1000 -n1)
+# NUMBER=$(shuf -i 1-1000 -n1) (replaced to pass tests)
 NUMBER=$(( RANDOM % 1000 + 1 ))
 echo "Guess the secret number between 1 and 1000:"
 read GUESS
@@ -67,4 +67,3 @@ else
 fi
 #update DB
 UPDATE=$($PSQL "update users set games_played=$UPDATED_GAMES, best_game=$UPDATED_BEST where username='$USERNAME'")
-# echo "Thanks for playing! Your profile was updated."
